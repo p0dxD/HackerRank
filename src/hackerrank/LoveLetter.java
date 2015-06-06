@@ -1,33 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hackerrank;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  *
- * @author Joseph
+ * @author Jose
  */
 public class LoveLetter {
 
     private static boolean isPalindrome;//if  otherwise is not
     private static int changesNeededToBePalindrome = 0;//# of changes
-    private static int T;
+    private static int T;//number of words
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         String word;
         Scanner input = new Scanner(System.in);
         T = input.nextInt();
         for(int i = 0; i < T; i++){
-        word = input.next();
+        word = input.next();//get the next word
         if (isPalindrome(word)) {
             System.out.println("0");
         
@@ -37,7 +31,11 @@ public class LoveLetter {
         changesNeededToBePalindrome = 0;
         }
     }
-
+    /**
+     * returns an int with the amount of changes a word should perform
+     * @param word 
+     * @return amount of changes
+     */
     private static int changesToMakePalindrome(String word) {
         String firstHalf;
         String secondHalf;
